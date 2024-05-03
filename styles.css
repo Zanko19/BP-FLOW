@@ -1,0 +1,99 @@
+body, html {
+    margin: 10px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar .logo span:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1E90FF;
+}
+
+.navbar .logo span:last-child {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    
+}
+.navbar .logo img {
+height: 100px;
+width: 100px;
+}
+.logo {
+background-color: none;}
+
+
+#titre {
+    text-shadow:  2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 20px; /* Ajoute de l'espace horizontal autour du titre */
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.text-container {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img.front {
+    position: relative; /* Ceci est nécessaire pour être au-dessus de l'autre image */
+    z-index: 2; /* Plus haut z-index pour rester en haut */
+    width: 300px; /* Ajustez selon la taille nécessaire */
+    height: 300px;
+}
+
+.image-container img.behind {
+    position: absolute;
+    z-index: 1; /* Plus bas z-index pour rester en arrière */
+    top: 10px; /* Ajustez la position verticale */
+    left: -20px; /* Ajustez la position horizontale */
+    width: 200px; /* Ajustez selon la taille nécessaire */
+    height: 200px;
+}
+.header {
+    border-width:2px;
+border-style:solid;
+border-color:black;
+border-radius: 100px;
+margin : 10px 50px;
+padding : 0 20px;
+overflow: hidden;
+}
