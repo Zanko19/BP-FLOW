@@ -209,7 +209,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;  /* Augmente l'espace entre les flex containers */
+  gap: 40px;  
   padding: 22px;
   position: relative;
 }
@@ -217,7 +217,7 @@ html {
 .flex-column {
   display: flex;
   flex-direction: column;
-  gap: 200px;  /* Augmente l'espace entre les boxes dans la colonne */
+  gap: 100px; 
   justify-content: center;
 }
 
@@ -277,19 +277,19 @@ html {
 
 
 .text-content {
-  max-width: 600px;  /* Double la largeur maximale */
+  max-width: 600px;  
   text-align: left;
 }
 
 .text-content h2 {
   color: #023C86;
-  font-size: 48px;  /* Augmente la taille du titre */
-  margin-bottom: 20px;  /* Augmente l'espace sous le titre */
+  font-size: 48px;  
+  margin-bottom: 20px;  
 }
 
 .text-content p {
-  margin: 10px 0;  /* Augmente l'espace vertical */
-  font-size: 20px;  /* Augmente la taille du texte */
+  margin: 10px 0;  
+  font-size: 20px;  
   color: #666;
 }
 
@@ -298,11 +298,11 @@ html {
   color: white;
   border: none;
   border-radius: 25px;
-  padding: 15px 30px;  /* Augmente le padding */
+  padding: 15px 30px; 
   cursor: pointer;
-  margin-top: 20px;  /* Augmente l'espace au-dessus du bouton */
+  margin-top: 20px;
   text-align: center;
-  font-size: 18px;  /* Augmente la taille du texte */
+  font-size: 18px;  
 }
 
 .contact-button:hover {
@@ -312,8 +312,8 @@ html {
 #revo {
   font-weight: bold;
   color: black;
-  font-size: 32px;  /* Augmente la taille du texte */
-  margin-bottom: 20px;  /* Augmente l'espace sous le texte */
+  font-size: 32px;  
+  margin-bottom: 20px;  
 }
 .container {
   display: flex;
@@ -335,16 +335,35 @@ html {
 }
 
 .content {
+  display: flex;
+  align-items: center;
   text-align: center;
+  gap: 20px; /* Adjust the gap between steps and arrows as needed */
 }
 
-.box-247 h2 {
+.step, .arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step img {
+  width: 100px; /* Adjust the size of the images as needed */
+  height: 100px; /* Adjust the size of the images as needed */
+}
+
+.arrow img {
+  width: 30px; /* Adjust the size of the arrows as needed */
+  height: 30px; /* Adjust the size of the arrows as needed */
+}
+
+.step h2 {
   font-size: 24px;
-  color: #333; /* Couleur du texte */
+  color: #333;
+  margin: 10px 0 5px;
 }
 
-.box-247 p {
+.step p {
   font-size: 18px;
-  color: #666; /* Couleur du texte */
+  color: #666;
 }
-
