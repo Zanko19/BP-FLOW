@@ -72,17 +72,12 @@ html {
   margin-bottom: 0;
 }
 
-.stars {
-  
-}
-
 .text-container {
   text-align: left;
   margin: 0 100px;
   display: flex;
   flex-direction: column; /* Organise les éléments verticalement */
 }
-
 
 .intro {
   display: flex;
@@ -92,8 +87,6 @@ html {
   margin-right: 100px;
   margin-top: 50px;
 }
-
-
 
 .image-container {
   position: relative;
