@@ -10,12 +10,12 @@ html {
   background-color: #ffffff;
   color: white;
   height: 50px;
+  font-size: 25px;
 }
 .contact-btn {
   background: none;
-  border: none;
   color: #023c86;
-  font-size: 15px;
+  font-size: 22px;
   cursor: pointer;
   font-weight: bold;
 }
@@ -44,15 +44,15 @@ html {
 .nav-links a {
   color: #023c86;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 22px;
 }
 
 .nav-links a:hover {
   text-decoration: underline;
 }
 .navbar .logo img {
-  height: 100%;
-  width: 100px;
+  height: 200%;
+  width: 160px;
   overflow: hidden;
   align-items: center;
 }
@@ -62,13 +62,13 @@ html {
 
 .title-container {
   display: flex;
-  align-items: center; /* Alignement vertical des éléments */
+  align-items: center; 
 }
 
 #titre {
   font-size: 40px;
   text-align: left;
-  margin-right: 10px; /* Ajoute un peu d'espace entre le titre et l'image */
+  margin-right: 10px;
   margin-bottom: 0;
 }
 
@@ -76,7 +76,7 @@ html {
   text-align: left;
   margin: 0 100px;
   display: flex;
-  flex-direction: column; /* Organise les éléments verticalement */
+  flex-direction: column; 
 }
 
 .intro {
@@ -108,14 +108,12 @@ html {
   height: 500px;
 }
 .header {
-  border-width: 2px;
-  border-style: solid;
-  border-color: black;
   border-radius: 100px;
   margin: 15px 100px;
   padding: 15px 30px;
   overflow: hidden;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 #subtitle {
   font-weight: bold;
@@ -142,7 +140,7 @@ html {
 }
 
 #contactus:hover {
-  background-color: #023c86;
+  background-color: #cc0f0f;
 }
 
 @keyframes slide {
@@ -484,8 +482,8 @@ h2 {
   border-radius: 0 50px 0 50px;
   width: 100%;
   max-width: 500px;
-  margin: 0 auto; /* Centers the form horizontally */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 fieldset {
@@ -516,16 +514,15 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  background-color: #d9e1fc; /* Sets the background color to light purple */
+  background-color: #d9e1fc;
 }
 
-/* You may want to adjust the focus style to enhance visibility when the element is active */
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
   outline: none;
   border-color: #023c86;
-  background-color: #a6b8e8; /* A slightly darker shade when focused for better UX */
+  background-color: #a6b8e8;
 }
 
 .send-button {
@@ -536,25 +533,27 @@ textarea:focus {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  display: block; /* Makes button width 100% of the form width */
+  display: block;
   width: 100%;
 }
-
 .send-button:hover {
   background-color: #023c86;
 }
 footer {
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   color: #333;
   padding: 20px 0;
   font-family: Arial, sans-serif;
   width: 100%;
 }
-
+.footer-image {
+  height: 70px;
+  background-color: #000;
+}
 .footer-container {
   display: flex;
-  flex-direction: column; /* Stacks children vertically */
-  align-items: center; /* Centers children horizontally */
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
@@ -564,8 +563,8 @@ footer {
 .footer-links-container {
   display: flex;
   justify-content: space-between;
-  width: 100%; /* Full width of the container */
-  margin: 20px 0; /* Adds vertical spacing around link sections */
+  width: 100%; 
+  margin: 20px 0; 
 }
 
 .footer-links {
@@ -591,8 +590,9 @@ footer {
 
 .footer-rights {
   text-align: center; /* Centers the copyright text */
-  font-size: 12px;
+  font-size: 14px;
   color: #666;
   width: 100%; /* Full width to center the text */
   margin-top: 20px; /* Adds spacing above the copyright */
+  font-weight: bold;
 }
