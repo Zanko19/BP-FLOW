@@ -28,8 +28,10 @@
     </div>
     <div class="intro">
       <div class="text-container">
-        <img src="./src/img/AI.png" alt="Image AI" class="stars" />
-        <h1 id="titre">Digitalisez mieux grâce à l'IA</h1>
+        <div class="title-container"> <!-- Nouveau div pour flexbox -->
+          <h1 id="titre">Digitalisez mieux grâce à l'IA</h1>
+          <img src="./src/img/AI.png" alt="Image AI" class="stars" />
+        </div>
         <p id="subtitle">
           Innover, Créer et Simplifier.<br />
           Avançons ensemble !
@@ -43,6 +45,7 @@
         <img src="./src/img/Flat.png" alt="Image Flat" class="front" />
       </div>
     </div>
+    
     <div class="middle">
         <h1 id="confiance">Ils nous font confiance</h1>
     </div>
@@ -137,42 +140,97 @@
 </div>
 <div class="tools-section">
   <div class="tools-content">
-    <div class="tools-group">
+    <div class="tools-group web-tools">
       <h2>Nos outils de création web</h2>
-      <div class="tool">
-        <img src="./src/img/logo/figma.svg" alt="Figma">
+      <div class="tool-row">
+        <div class="tool"><img class="logo-figma" src="./src/img/logo/figma.svg" alt="Figma"></div>
+        <div class="tool"><img class="logo-wordpress" src="./src/img/logo/wordpress.svg" alt="WordPress"></div>
+        <div class="tool"><img class="logo-elementor" src="./src/img/logo/elementor.svg" alt="Elementor"></div>
       </div>
-      <div class="tool">
-        <img src="./src/img/logo/wordpress.svg" alt="WordPress">
-      </div>
-      <div class="tool">
-        <img src="./src/img/logo/elementor.svg" alt="Elementor">
-      </div>
-      <div class="tool">
-        <img src="./src/img/logo/canva.svg" alt="Canva">
-      </div>
-      <div class="tool">
-        <img src="./src/img/logo/jira.svg" alt="Jira">
+      <div class="tool-row">
+        <div class="tool"><img class="logo-canva" src="./src/img/logo/canva.svg" alt="Canva"></div>
+        <div class="tool"><img class="logo-jira" src="./src/img/logo/jira.svg" alt="Jira"></div>
       </div>
     </div>
-    <div class="tools-group">
+    <div class="tools-group ai-tools">
       <h2>Nos outils IAs</h2>
-      <div class="tool">
-        <img src="./src/img/logo/chatgpt.svg" alt="ChatGPT">
-      </div>
-      <div class="tool">
-        <img src="./src/img/logo/mistralai.svg" alt="Mistral AI">
-      </div>
-      <div class="tool">
-        <img src="./src/img/logo/gemini.svg" alt="Gemini">
-      </div>
-      <div class="tool">
-        <img src="./src/img/logo/copilot.svg" alt="Copilot">
-      </div>
+      <div class="tool"><img class="logo-chatgpt" src="./src/img/logo/chatgpt.svg" alt="ChatGPT"></div>
+      <div class="tool"><img class="logo-mistralai" src="./src/img/logo/mistralai.svg" alt="Mistral AI"></div>
+      <div class="tool"><img class="logo-gemini" src="./src/img/logo/gemini.svg" alt="Gemini"></div>
+      <div class="tool"><img class="logo-copilot" src="./src/img/logo/copilot.svg" alt="Copilot">Copilot</div>
     </div>
   </div>
   <div class="background-image"></div>
 </div>
+<form action="/submit-form" method="POST" class="contact-form">
+  <fieldset>
+    <legend>Formulaire de contact</legend>
+    <div class="form-group">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Votre e-mail" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Votre message" required rows="4"></textarea>
+    </div>
+    <button class="send-button" type="submit">Envoyer</button>
+  </fieldset>
+</form>
+<footer>
+  <div class="footer-container">
+      <div class="footer-logo">
+          <img src="path_to_your_logo.png" alt="BP FLOW Logo" style="height: 50px;"> <!-- Adjust height as needed -->
+      </div>
+      <div class="footer-links-container">
+          <div class="footer-links">
+              <h4>Menu</h4>
+              <ul>
+                  <li><a href="#">Accueil</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">About Us</a></li>
+              </ul>
+          </div>
+          <div class="footer-links">
+              <h4>Services</h4>
+              <ul>
+                  <li><a href="#">Formations</a></li>
+                  <li><a href="#">Ateliers</a></li>
+                  <li><a href="#">Consulting</a></li>
+              </ul>
+          </div>
+          <div class="footer-links">
+              <h4>L'équipe</h4>
+              <ul>
+                  <li><a href="#">Mentions légales</a></li>
+                  <li><a href="#">Conditions générales</a></li>
+              </ul>
+          </div>
+          <div class="footer-links">
+              <h4>Nous contacter</h4>
+              <ul>
+                  <li><a href="#">Protection des données</a></li>
+                  <li><a href="#">Gestion des cookies</a></li>
+                  <li><a href="#">+32 (0) 498 45 19 40</a></li>
+                  <li><a href="#">79 rue des francs, 1040 Bruxelles</a></li>
+                  <li><a href="#">Lun-Ve de 9h à 17h</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer-rights">
+          <p>2024 BP FLOW © All rights reserved</p>
+      </div>
+  </div>
+</footer>
+
+
+
+
 
 
 
