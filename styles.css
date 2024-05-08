@@ -68,7 +68,7 @@ html {
 
 #titre {
   font-size: 40px;
-  text-align: left;
+  text-align: right;
   margin-right: 10px;
   margin-bottom: 0;
 }
@@ -85,10 +85,14 @@ html {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  margin-right: 100px;
+  margin-right: 150px;
+  margin-left: 00px;
   margin-top: 50px;
 }
-
+.stars {
+  position: relative;
+  
+}
 .image-container {
   position: relative;
 }
