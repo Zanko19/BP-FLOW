@@ -183,7 +183,7 @@ html {
   animation-play-state: paused;
 }
 .logos-slide img {
-  height: 100px;
+  height: 150px;
   margin: 0 50px;
 }
 .logos-slide {
@@ -451,20 +451,39 @@ h2 {
 #toologocopilot {
   font-weight: bold;
   font-size: x-large;
+  margin-left: 15px;
+  background: linear-gradient(to right, 
+    #0077A2,  /* Bleu foncé */
+    #468C64,  /* Vert foncé */
+    #B1B319,  /* Jaune foncé */
+    #CC6D00,  /* Orange foncé */
+    #B32400   /* Rouge orangé foncé */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.logo-figma,
-.logo-elementor,
+
+
+
+
 .logo-canva,
 .logo-jira,
-.logo-chatgpt,
-.logo-mistralai,
-.logo-gemini,
-.logo-copilot {
-  width: 130px;
+.logo-chatgpt
+ {
+  width: 150px;
   height: 100px;
 }
 
+.logo-mistralai {
+  width: 150px;
+  height: 100px;
+  transform: translateY(-15px);
+}
+
+.logo-gemini {
+ margin-bottom: 35px;
+}
 .logo-figma {
   width: 190px;
   height: 190px;
@@ -474,6 +493,7 @@ h2 {
 }
 .logo-elementor {
   width: 200px;
+  margin-left: 25px;
 }
 .background-image {
   position: absolute;
@@ -485,51 +505,83 @@ h2 {
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 1;
 }
+.tool.tool-chatgpt {
+  transform: translatex(-40px);
+}
+
+.tool.tool-mistralai {
+  transform: translatex(150px);
+}
+
+.tool.tool-gemini {
+  transform: translatex(-40px);
+}
+
+.tool.tool-copilot {
+  transform: translatex(160px);
+}
 .contact-form {
   background: #ffffff;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 0 50px 0 50px;
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+#message {
+  margin-bottom: 20px; /* Ajoute une marge en bas de la zone de texte 'Message' */
+}
+legend {
+  font-size: 28px; /* Augmente la taille de la police */
+  color: #333;
+  padding-bottom: 15px;
+  font-weight: bold; /* Rend le texte en gras */
+  text-align: center; /* Centre le texte dans le formulaire */
+  width: 100%; /* Assure que la légende prend toute la largeur pour centrer le texte */
+}
+
 
 fieldset {
   border: none;
 }
 
-legend {
-  font-size: 24px;
-  color: #333;
-  padding-bottom: 15px;
+.row {
+  display: flex;
+  justify-content: space-between; /* Assure un espacement entre les colonnes */
 }
 
-.form-group {
-  margin-bottom: 20px;
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Assure que chaque colonne prend une part égale de l'espace disponible */
+  margin-right: 10px; /* Espacement entre les colonnes */
+}
+
+.column:last-child {
+  margin-right: 0; /* Aucun espacement sur le côté droit du dernier élément */
 }
 
 label {
   display: block;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 5px; /* Ajoute une marge en bas du label */
+  margin-top: 10px; /* Ajoute une marge au-dessus du label */
+  padding: 5px 0; /* Ajoute un padding vertical mais pas horizontal */
+  font-size: 16px; /* Ajuste la taille du texte du label pour une meilleure visibilité */
+  color: #333; /* Définit la couleur du texte des labels */
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+input[type="text"], input[type="email"], textarea {
   width: 100%;
-  padding: 8px;
+  padding: 13px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   background-color: #d9e1fc;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   outline: none;
   border-color: #023c86;
   background-color: #a6b8e8;
@@ -546,39 +598,40 @@ textarea:focus {
   display: block;
   width: 100%;
 }
+
 .send-button:hover {
   background-color: #023c86;
 }
+
+
 footer {
   background-color: #ffffff;
   color: #333;
-  padding: 20px 0;
+  padding: 20px 20px 0 20px; /* Haut, Droite, Bas, Gauche */
   font-family: Arial, sans-serif;
   width: 100%;
 }
 .footer-image {
-  height: 70px;
-  background-color: #000;
+  height: 100px;
 }
+
+
 .footer-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column; /* Organise les éléments en colonne */
+  align-items: center; /* Centre les éléments horizontalement */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .footer-links-container {
   display: flex;
-  justify-content: space-between;
-  width: 100%; 
-  margin: 20px 0; 
+  justify-content: space-around; /* Change to space-around for better spacing */
+  width: 100%;
 }
 
 .footer-links {
-  margin-right: 20px;
+  margin: 0 15px; /* Ajustement pour un meilleur espacement entre les liens */
 }
 
 .footer-links h4 {
@@ -599,13 +652,11 @@ footer {
 }
 
 .footer-rights {
-  text-align: center; /* Centers the copyright text */
+  text-align: center;
   font-size: 14px;
   color: #666;
-  width: 100%; /* Full width to center the text */
-  margin-top: 20px; /* Adds spacing above the copyright */
+  width: 100%;
   font-weight: bold;
+  transform: translateY(100px);
 }
-.hatchiv {
-  height: 100%;
-}
+
