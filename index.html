@@ -10,22 +10,24 @@
       href="./src/img/logo-removebg-preview.png"
     />
     <link rel="stylesheet" href="./styles.css" />
+  
   </head>
   <body>
     <div class="header">
       <nav class="navbar">
-        <div class="logo">
-          <img src="./src/img/Logo.png" alt="Logo BP FLOW" />
-        </div>
-        <ul class="nav-links">
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#services">Services</a></li>
-         
-          <li><a href="#apropos">À propos</a></li>
-        </ul>
-        <button class="contact-btn">Contactez-Nous</button>
+          <div class="logo">
+              <img src="./src/img/Logo.png" alt="Logo BP FLOW" />
+          </div>
+          <button class="hamburger">&#9776;</button> <img src="./src/img/logo/burgermenu.svg">
+          <ul class="nav-links">
+              <li><a href="#accueil">Accueil</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#apropos">À propos</a></li>
+          </ul>
+          <button class="contact-btn">Contactez-Nous</button>
       </nav>
-    </div>
+  </div>
+  
     <div class="intro">
       <div class="text-container">
         <div class="title-container"> <!-- Nouveau div pour flexbox -->
@@ -167,12 +169,13 @@
   </div>
   <div class="background-image"></div>
 </div>
-<form action="/submit-form" method="POST" class="contact-form">
+<form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
   <fieldset>
     <legend>Formulaire de contact</legend>
     <div class="form-group row"> <!-- Ajout de la classe 'row' pour flexbox -->
       <div class="column">
         <label for="nom">Nom</label>
+        <input type="hidden" name="access_key" value="097268db-4a26-46d6-9900-a5e7eaa9d8f9">
         <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
       </div>
       <div class="column">
@@ -221,24 +224,9 @@
       </div>
   </div>
 </footer>
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-c83751f8-48bc-48e4-a727-62b4d612fbe9" data-elfsight-app-lazy></div>
+<script src="script.js"></script>
 
-  </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    </div>
   </body>
 </html>
