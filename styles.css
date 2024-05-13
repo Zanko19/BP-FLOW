@@ -13,38 +13,154 @@ html {
   font-size: 20px;
 }
 .hamburger {
-  display: none; /* Caché par défaut */
+  display: none; /* Le bouton hamburger est caché par défaut */
+  cursor: pointer;
   font-size: 24px;
   background: none;
   border: none;
-  cursor: pointer;
+  color: #023c86; /* Couleur peut être ajustée */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px), (max-width:768px) {
+
+  .navbar {
+    justify-content: center;
+  }
   .hamburger {
-      display: block; /* Afficher le hamburger sur les petits écrans */
+    display: block; /* Assure que le hamburger est visible */
+    position: relative; /* Position absolue pour permettre un placement précis */
+    left: 50%; /* Démarre à la moitié de la navbar */
+    
   }
-
+.contact-btn {
+    display: none; /* Cache les autres éléments de la navbar */
+  }
   .nav-links {
-      position: absolute;
-      background-color: #ffffff;
-      width: 100%;
-      height: 100vh;
-      top: 50px;
-      left: -100%;
-      transition: left 0.3s;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond semi-transparente */
+    backdrop-filter: blur(10px); /* Effet de flou derrière le menu */
+    -webkit-backdrop-filter: blur(10px); /* Prise en charge de Safari */
+    width: 45%;
+    height: auto;
+    top: 20px;
+    left: -100%;
+    transition: left 0.3s;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none; /* Cache les liens jusqu'à ce que le hamburger soit cliqué */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce pour améliorer l'effet de flottaison */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Bordure subtile en haut */
+    z-index: 1000; /* S'assurer que le menu est au-dessus des autres éléments */
+    padding: 10px;
   }
-
-  .nav-links a {
-      color: #023c86;
-      font-size: 24px;
-  }
+  
 
   .nav-links li {
-      padding: 20px 0;
+    padding: 20px;
+    
+  }
+.logo  {
+  position: absolute;
+  left: 1px;
+  padding-left: 55px;
+  
+
+}
+  .nav-links a {
+    font-size: 24px;
+     /* Augmente la taille pour une meilleure lisibilité sur mobile */
+  }
+}
+@media(max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: flex-end; /* Aligner le contenu de l'en-tête à droite */
+    padding-right: 20px; /* Ajouter un peu de padding à droite pour un meilleur espacement */
+  }
+  .hamburger {
+    display: block; /* Assure que le hamburger est visible */
+    position: relative; /* Position absolue pour permettre un placement précis */
+    left: 50%; /* Démarre à la moitié de la navbar */
+    
+  }
+  
+  .nav-links {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond semi-transparente */
+    backdrop-filter: blur(10px); /* Effet de flou derrière le menu */
+    -webkit-backdrop-filter: blur(10px); /* Prise en charge de Safari */
+    width: 45%;
+    height: auto;
+    top: 20px;
+    left: -100%;
+    transition: left 0.3s;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none; /* Cache les liens jusqu'à ce que le hamburger soit cliqué */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce pour améliorer l'effet de flottaison */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Bordure subtile en haut */
+    z-index: 1000; /* S'assurer que le menu est au-dessus des autres éléments */
+    padding: 10px;
+  }
+  .nav-links li {
+    padding: 0;
+  }
+  .nav-links a {
+    font-size: 16px;
+  }
+  .logo {
+    position: absolute;
+    left: 1px;
+    padding-left: 55px;
+  }
+  
+  .contact-btn {
+    display: none;
+  }
+}
+@media(max-width: 1024px) {
+  .hamburger {
+    display: block; /* Assure que le hamburger est visible */
+    position: relative; /* Position absolue pour permettre un placement précis */
+    left: 50%; /* Démarre à la moitié de la navbar */
+    
+  }
+  
+  .nav-links {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond semi-transparente */
+    backdrop-filter: blur(10px); /* Effet de flou derrière le menu */
+    -webkit-backdrop-filter: blur(10px); /* Prise en charge de Safari */
+    width: 45%;
+    height: auto;
+    top: 20px;
+    left: -100%;
+    transition: left 0.3s;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none; /* Cache les liens jusqu'à ce que le hamburger soit cliqué */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce pour améliorer l'effet de flottaison */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Bordure subtile en haut */
+    z-index: 1000; /* S'assurer que le menu est au-dessus des autres éléments */
+    padding: 10px;
+  }
+  .nav-links li {
+    padding: 0;
+  }
+  .nav-links a {
+    font-size: 16px;
+  }
+  .logo {
+    position: absolute;
+    left: 1px;
+    padding-left: 55px;
+  }
+  
+  .contact-btn {
+    display: none;
   }
 }
 .contact-btn {
@@ -188,6 +304,81 @@ html {
   background-color: #023c86;
 }
 
+@media (max-width: 768px) { /* Généralement pour les tablettes */
+  .title-container, .text-container {
+    margin: 0 50px; /* Réduire les marges */
+    width: 100%; /* Prend toute la largeur disponible */
+  }
+
+  #titre {
+    font-size: 30px; /* Réduire la taille du titre */
+  }
+
+  #subtitle {
+    font-size: large; /* Adapter la taille du sous-titre */
+  }
+
+  .stars {
+    width: 80px; /* Adapter la taille de l'image */
+    height: auto;
+  }
+
+  .image-container {
+    display: none; /* Cacher l'image container */
+  }
+
+  .intro, .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu verticalement et horizontalement */
+    width: 100%; /* Assure que le container prend toute la largeur */
+  }
+}
+
+@media (max-width: 480px), (max-width:768px) { /* Généralement pour les téléphones */
+  .image-container {
+    display: none; /* Cacher l'image container */
+  }
+
+  .title-container, .text-container {
+    margin: 0 20px; /* Réduire encore plus les marges */
+    width: 100%; /* Assure que le container prend toute la largeur */
+    align-items: center;
+    justify-content: center;
+  }
+
+  #titre {
+    font-size: 20px;
+    align-items: center;
+    text-align: center; /* Réduire davantage la taille du titre */
+  }
+
+  #subtitle {
+    font-size: medium; /* Adapter la taille du sous-titre */
+  }
+
+  .stars {
+    position: absolute;
+    width: 50px; /* Réduire significativement la taille de l'image */
+    height: auto;
+    right: 1px;
+  }
+
+  #contactus {
+    width: 160px; /* Ajuster la largeur du bouton */
+    padding: 10px 5px; /* Ajuster le padding */
+    font-size: 15px;
+  }
+
+  .intro, .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu verticalement et horizontalement */
+  }
+}
+
+
+
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -241,8 +432,29 @@ html {
 
 #confiance {
   font-size: 30px;
-  color: #5b7bdc;
+  color: #4566d6;
 }
+
+@media (max-width: 480px), (max-width:768px) {
+  #confiance {
+    font-size: 24px; /* Taille de police réduite pour le titre */
+    color: #4566d6;
+  }
+
+  .logos-slide img {
+    height: 100px; /* Taille des images réduite pour les téléphones */
+    margin: 0 20px; /* Réduction de l'espacement entre les logos */
+  }
+
+  .logos::before, .logos::after {
+    width: 100px; /* Réduction de la largeur des gradients pour ne pas couvrir trop de logos */
+  }
+
+  .middle {
+    margin-top: 40px; /* Ajustement de la marge supérieure pour un meilleur alignement */
+  }
+}
+
 .services-section {
   display: flex;
   align-items: center;
@@ -363,6 +575,84 @@ html {
   font-size: 32px;
   margin-bottom: 20px;
 }
+
+@media (max-width: 480px), (max-width:768px) {
+  .services-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .services {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .flex-column {
+    gap: 30px;
+  }
+
+  .box-2-wrapper {
+    flex-direction: column;
+  }
+
+  .abstract-background {
+    position: absolute;
+    top: -180px;
+    left: -200px;
+    width: 160%;
+    height: 170%;
+    z-index: -1;
+    background-image: url("./src/img/logo/blob.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 60%;
+    margin-left: 100px;
+  }
+
+  .service-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: auto;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .service-box img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .service-box h3 {
+    font-size: 18px; /* Réduction de la taille de la police pour les titres */
+  }
+
+  .service-box p {
+    font-size: 14px; /* Réduction de la taille de la police pour les paragraphes */
+  }
+
+  .text-content {
+    display: none; /* Cache le contenu textuel sur les téléphones */
+  }
+
+  .contact-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -442,6 +732,44 @@ html {
   font-size: 18px;
   color: #666;
 }
+
+@media (max-width: 480px), (max-width:768px) {
+  .container {
+    gap: 20px;
+    height: auto;
+    padding: 10px;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    justify-content: center;
+  }
+  .main-title, .sub-title {
+    font-size: 24px;
+  }
+
+  .box-247 {
+    width: 90%;
+    border-radius: 50px;
+    padding: 20px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+.arrow {
+    justify-content: center;
+    align-items: center;
+  }
+  .arrow img  {
+    transform: rotate(90deg);
+    width: 40px;
+    height: 40px;
+   
+  }
+}
 .tools-section {
   position: relative;
   display: flex;
@@ -476,7 +804,7 @@ html {
 h2 {
   text-align: center;
   font-size: 24px;
-  color: #333;
+  color: #4566d6;
   margin-bottom: 20px;
 }
 
@@ -555,6 +883,118 @@ h2 {
 .tool.tool-copilot {
   transform: translatex(160px);
 }
+
+
+
+@media (max-width: 480px), (max-width:768px) {
+  .tools-section {
+    flex-direction: column;
+    height: auto; /* Ajustement de la hauteur */
+  }
+
+  .tools-content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tools-group {
+    width: 100%; /* Chaque groupe prend la pleine largeur */
+  }
+
+  .tool-row:first-child {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .tool-row:last-child {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .tool {
+    width: 33%; /* Chaque logo prend approximativement un tiers de l'espace dans la première ligne */
+    margin: 10px 0; /* Ajustement des marges pour l'espacement vertical */
+  }
+
+  .tool:nth-last-child(-n+2) { /* Sélectionne les deux derniers outils de chaque groupe */
+    width: 50%; /* Chaque logo dans la deuxième ligne prend la moitié de l'espace */
+  }
+
+  .background-image {
+    position: absolute; /* L'image de fond ne sera plus positionnée absolument */
+    width: 100%;
+    height: 100%; /* Ajustement de la hauteur de l'image de fond */
+    order: 2; /* S'assure que l'image de fond est en dessous des outils IA */
+    top: 300px;
+    
+  }
+
+  .ai-tools {
+    order: 1; /* Place les outils IA au-dessus de l'image de fond */
+  }
+
+.logo-jira{
+  width: 100px;
+  height: 100px;
+}
+.logo-chatgpt {
+  width: 150px;
+  height: 100px;
+}
+.logo-canva {
+  width: 80px;
+  height: 80px;
+}
+.logo-mistralai {
+  width: 150px;
+  height: 100px;
+  transform: translateY(-15px);
+}
+
+.logo-gemini {
+  margin-bottom: 3px;
+}
+.logo-figma {
+  width: 90px;
+  height: 90px;
+}
+.logo-wordpress {
+  padding-left: 20px;
+  width: 50px;
+}
+.logo-elementor {
+  width: 100px;
+}
+
+.tool.tool-chatgpt {
+  transform: translatex(-40px);
+}
+
+.tool.tool-mistralai {
+  transform: translatex(45px);
+}
+
+.tool.tool-gemini {
+  transform: translatex(20px);
+  transform: translateY(-20px);
+}
+
+.tool.tool-copilot {
+  transform: translatex(70px);
+}
+  #iatitle {
+    text-align: right; /* Aligner le texte à droite */
+    padding-left: 150px; /* Ajouter un peu d'espace à droite pour éviter que le texte touche le bord de l'écran */
+  }
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #4566d6;
+    margin-bottom: 20px;
+  }
+}
+
+
 .contact-form {
   background: #ffffff;
   padding: 20px;
@@ -570,7 +1010,7 @@ h2 {
 }
 legend {
   font-size: 28px; /* Augmente la taille de la police */
-  color: #333;
+  color: #4566d6;
   padding-bottom: 15px;
   font-weight: bold; /* Rend le texte en gras */
   text-align: center; /* Centre le texte dans le formulaire */
@@ -641,13 +1081,47 @@ textarea:focus {
   background-color: #023c86;
 }
 
+@media (max-width: 480px), (max-width:768px) {
+  .contact-form {
+    width: 80%; /* Réduction proportionnelle de la largeur du formulaire */
+    padding: 25px; /* Ajustement du padding pour conserver l'esthétique sur petits écrans */
+    margin: 20px auto; /* Centrage horizontal et espacement vertical ajusté */
+    display: flex; /* Activation de Flexbox */
+    flex-direction: column; /* Direction de la flexbox */
+    justify-content: center; /* Centre les éléments verticalement dans le conteneur */
+    align-items: center; /* Alignement horizontal au centre */
+  }
+
+  #message, input[type="text"], input[type="email"], textarea {
+    padding: 10px; /* Réduction du padding pour les éléments de formulaire pour économiser de l'espace */
+    width: 100%; /* Ajuste la largeur pour inclure le padding sans déborder */
+  }
+
+  .row {
+    flex-direction: column; /* Les éléments dans la classe row s'alignent verticalement */
+  }
+
+  .column {
+    margin-right: 0; /* Suppression de la marge droite pour les colonnes */
+    margin-bottom: 10px; /* Ajout d'un espace en bas de chaque colonne */
+    width: 100%; /* Assure que les colonnes prennent toute la largeur disponible */
+  }
+
+  .send-button {
+    padding: 12px 0; /* Augmentation du padding vertical pour un meilleur toucher sur écrans tactiles */
+    width: 100%; /* Ajuste la largeur du bouton pour qu'il corresponde à celle du formulaire */
+  }
+}
+
+
+
 footer {
   background-color: #f2f2f2;
   color: #333;
   padding: 20px 20px 0 20px; /* Haut, Droite, Bas, Gauche */
   font-family: Arial, sans-serif;
   border-top: solid 1px #ccc;
-  margin-top: 100px;
+  margin-top: 50px;
   background: linear-gradient(
     90deg,
     rgba(235, 239, 254, 0.4) 0%,
@@ -715,6 +1189,39 @@ footer {
   font-weight: bold;
   margin-top: 20px; /* Adjust space above */
 }
+
+@media (max-width: 480px), (max-width:768px) {
+  .footer-container {
+    padding: 10px; /* Ajustement du padding pour les petits écrans */
+  }
+
+  .footer-top {
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center; /* Centre les éléments dans le footer */
+    text-align: center; /* Centre le texte pour une meilleure lecture */
+  }
+
+  .footer-logo {
+    margin-right: 0; /* Suppression de la marge à droite */
+    margin-bottom: 20px; /* Ajoute de l'espace entre le logo et les liens */
+  }
+
+  .footer-links-container {
+    flex-direction: column; /* Affiche les groupes de liens en colonne */
+    align-items: center; /* Centre les liens dans leur conteneur */
+  }
+
+  .footer-links {
+    margin: 20px 0; /* Ajoute de l'espace vertical entre les groupes de liens */
+    text-align: center; /* Assure que le texte des liens est centré */
+  }
+
+  .footer-rights {
+    margin-top: 10px; /* Réduit l'espace au-dessus du texte des droits */
+    font-size: 12px; /* Ajuste la taille de police pour les petits écrans */
+  }
+}
+
 #webtitle{
   transform: translateY(-26px);
 }
