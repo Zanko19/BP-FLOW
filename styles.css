@@ -1,5 +1,6 @@
 body,
 html {
+  min-height: 100vh;
   font-family: Arial, sans-serif;
 }
 
@@ -25,6 +26,10 @@ html {
 
   .navbar {
     justify-content: center;
+    box-shadow: none;
+  }
+  .header {
+    box-shadow: none;
   }
   .hamburger {
     display: block; /* Assure que le hamburger est visible */
@@ -40,30 +45,31 @@ html {
     background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond semi-transparente */
     backdrop-filter: blur(10px); /* Effet de flou derrière le menu */
     -webkit-backdrop-filter: blur(10px); /* Prise en charge de Safari */
-    width: 45%;
+    width: 20%;
     height: auto;
     top: 20px;
     left: -100%;
     transition: left 0.3s;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     display: none; /* Cache les liens jusqu'à ce que le hamburger soit cliqué */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce pour améliorer l'effet de flottaison */
     border-top: 1px solid rgba(0, 0, 0, 0.1); /* Bordure subtile en haut */
     z-index: 1000; /* S'assurer que le menu est au-dessus des autres éléments */
-    padding: 10px;
+    padding: 20px;
   }
   
 
   .nav-links li {
-    padding: 20px;
+    padding: 30px;
+    margin: 10px;
     
   }
-.logo  {
-  position: absolute;
+.navbar .logo img  {
+
   left: 1px;
-  padding-left: 55px;
+  padding-left: 65px;
   
 
 }
@@ -582,8 +588,8 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+   width: auto;
+   height: auto;
   }
 
   .services {
@@ -591,12 +597,11 @@ html {
     gap: 20px;
   }
 
-  .flex-column {
-    gap: 30px;
-  }
-
+  .flex-column,
+  .service-box box-3,
   .box-2-wrapper {
     flex-direction: column;
+    gap: 20px;
   }
 
   .abstract-background {
@@ -625,9 +630,7 @@ html {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: auto;
-    height: auto;
-    margin-top: 0;
+    
   }
 
   .service-box img {
@@ -636,15 +639,25 @@ html {
   }
 
   .service-box h3 {
-    font-size: 18px; /* Réduction de la taille de la police pour les titres */
+    font-size: 18px;
   }
 
   .service-box p {
-    font-size: 14px; /* Réduction de la taille de la police pour les paragraphes */
+    font-size: 14px;
   }
 
   .text-content {
-    display: none; /* Cache le contenu textuel sur les téléphones */
+    display: block; /* Show the text content */
+    text-align: center;
+  }
+
+  .text-content h2 {
+    display: block; /* Ensure the header is visible */
+  }
+
+  .text-content p,
+  .text-content button {
+    display: none; /* Hide other textual elements */
   }
 
   .contact-button {
@@ -652,6 +665,7 @@ html {
     font-size: 16px;
   }
 }
+
 
 .container {
   display: flex;
@@ -737,7 +751,7 @@ html {
   .container {
     gap: 20px;
     height: auto;
-    padding: 10px;
+    padding-top: 25px;
   }
   .content {
     display: flex;
