@@ -1,6 +1,7 @@
+
 body,
 html {
-  min-height: 100vh;
+  height: 100%;
   font-family: Arial, sans-serif;
 }
 
@@ -199,10 +200,12 @@ html {
   list-style: none;
   display: flex;
   margin: 0;
+  
 }
 
 .nav-links li {
   padding: 0 15px;
+  
 }
 
 .nav-links a {
@@ -213,7 +216,10 @@ html {
 
 .nav-links a:hover {
   text-decoration: underline;
+
+  
 }
+
 .navbar .logo img {
   height: 200%;
   width: 140px;
@@ -487,10 +493,6 @@ html {
   justify-content: center;
 }
 
-.box-2-wrapper {
-  display: flex;
-  align-items: center;
-}
 
 .abstract-background {
   position: absolute;
@@ -547,7 +549,7 @@ html {
 }
 
 .text-content h2 {
-  color: #023c86;
+  color: #4566d6;
   font-size: 48px;
   margin-bottom: 20px;
   text-align: left;
@@ -582,34 +584,33 @@ html {
   margin-bottom: 20px;
 }
 
-@media (max-width: 480px), (max-width:768px) {
+@media (max-width:768px) {
   .services-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-   width: auto;
-   height: auto;
+   width: 100%;
+   height: fit-content;
+   gap:0 ;
   }
 
   .services {
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
+    align-items: center;
   }
-
-  .flex-column,
-  .service-box box-3,
-  .box-2-wrapper {
+ 
+  .flex-column {
     flex-direction: column;
     gap: 20px;
   }
 
   .abstract-background {
     position: absolute;
-    top: -180px;
-    left: -200px;
-    width: 160%;
-    height: 170%;
+    top: -230px;
+    left: -300px;
+    width: 170%;
+    height: 190%;
     z-index: -1;
     background-image: url("./src/img/logo/blob.svg");
     background-size: contain;
@@ -630,7 +631,8 @@ html {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
+    width: auto;
+    height: auto; 
   }
 
   .service-box img {
@@ -639,7 +641,7 @@ html {
   }
 
   .service-box h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .service-box p {
@@ -650,9 +652,10 @@ html {
     display: block; /* Show the text content */
     text-align: center;
   }
-
+  
   .text-content h2 {
     display: block; /* Ensure the header is visible */
+    font-size: 32px;
   }
 
   .text-content p,
@@ -660,10 +663,6 @@ html {
     display: none; /* Hide other textual elements */
   }
 
-  .contact-button {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
 }
 
 
@@ -751,8 +750,15 @@ html {
   .container {
     gap: 20px;
     height: auto;
-    padding-top: 25px;
+    padding-top: 80px;
   }
+  .step,
+.arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
   .content {
     display: flex;
     align-items: center;
@@ -760,10 +766,12 @@ html {
     gap: 10px;
     justify-content: center;
   }
-  .main-title, .sub-title {
+  .main-title  {
     font-size: 24px;
   }
-
+.sub-title{
+  font-size: 20px;
+}
   .box-247 {
     width: 90%;
     border-radius: 50px;
@@ -773,15 +781,10 @@ html {
   .content {
     flex-direction: column;
   }
-.arrow {
-    justify-content: center;
-    align-items: center;
-  }
   .arrow img  {
     transform: rotate(90deg);
     width: 40px;
     height: 40px;
-   
   }
 }
 .tools-section {
@@ -807,7 +810,6 @@ html {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  box-sizing: border-box;
 }
 .tool-row {
   display: flex;
@@ -817,7 +819,7 @@ html {
 
 h2 {
   text-align: center;
-  font-size: 24px;
+  font-size: 32px;
   color: #4566d6;
   margin-bottom: 20px;
 }
@@ -904,6 +906,7 @@ h2 {
   .tools-section {
     flex-direction: column;
     height: auto; /* Ajustement de la hauteur */
+    padding-top: 50px;
   }
 
   .tools-content {
@@ -939,7 +942,7 @@ h2 {
     width: 100%;
     height: 100%; /* Ajustement de la hauteur de l'image de fond */
     order: 2; /* S'assure que l'image de fond est en dessous des outils IA */
-    top: 300px;
+    top: 460px;
     
   }
 
@@ -964,9 +967,12 @@ h2 {
   height: 100px;
   transform: translateY(-15px);
 }
-
+.logo-copilot {
+ height: 70px;
+}
 .logo-gemini {
   margin-bottom: 3px;
+  width: 100px;
 }
 .logo-figma {
   width: 90px;
@@ -996,16 +1002,10 @@ h2 {
 .tool.tool-copilot {
   transform: translatex(70px);
 }
-  #iatitle {
-    text-align: right; /* Aligner le texte à droite */
-    padding-left: 150px; /* Ajouter un peu d'espace à droite pour éviter que le texte touche le bord de l'écran */
-  }
-  h2 {
-    text-align: center;
-    font-size: 24px;
-    color: #4566d6;
-    margin-bottom: 20px;
-  }
+h2 {
+  font-size: 20px;
+}
+  
 }
 
 
@@ -1099,7 +1099,7 @@ textarea:focus {
   .contact-form {
     width: 80%; /* Réduction proportionnelle de la largeur du formulaire */
     padding: 25px; /* Ajustement du padding pour conserver l'esthétique sur petits écrans */
-    margin: 20px auto; /* Centrage horizontal et espacement vertical ajusté */
+    margin: 30px auto; /* Centrage horizontal et espacement vertical ajusté */
     display: flex; /* Activation de Flexbox */
     flex-direction: column; /* Direction de la flexbox */
     justify-content: center; /* Centre les éléments verticalement dans le conteneur */
@@ -1142,6 +1142,7 @@ footer {
     rgba(139, 167, 253, 0.4) 100%
   );
   overflow: hidden;
+  overflow-x: hidden;
 }
 
 .footer-image {
@@ -1217,16 +1218,17 @@ footer {
 
   .footer-logo {
     margin-right: 0; /* Suppression de la marge à droite */
-    margin-bottom: 20px; /* Ajoute de l'espace entre le logo et les liens */
   }
-
+  .footer-image {
+    width: 100px;
+    height: 100px;
+  }
   .footer-links-container {
     flex-direction: column; /* Affiche les groupes de liens en colonne */
     align-items: center; /* Centre les liens dans leur conteneur */
   }
 
   .footer-links {
-    margin: 20px 0; /* Ajoute de l'espace vertical entre les groupes de liens */
     text-align: center; /* Assure que le texte des liens est centré */
   }
 
@@ -1234,11 +1236,4 @@ footer {
     margin-top: 10px; /* Réduit l'espace au-dessus du texte des droits */
     font-size: 12px; /* Ajuste la taille de police pour les petits écrans */
   }
-}
-
-#webtitle{
-  transform: translateY(-26px);
-}
-#iatitle {
-  transform: translateX(-150px);
 }
