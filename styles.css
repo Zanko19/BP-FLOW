@@ -1,4 +1,3 @@
-
 body,
 html {
   height: 100%;
@@ -17,12 +16,12 @@ html {
   font-size: 20px;
 }
 .hamburger {
-  display: none; /* Le bouton hamburger est caché par défaut */
+  display: none;
   cursor: pointer;
   font-size: 24px;
   background: none;
   border: none;
-  color: #023c86; /* Couleur peut être ajustée */
+  color: #023c86;
 }
 .contact-btn {
   background-color: #0015ff;
@@ -69,33 +68,31 @@ html {
   overflow: hidden;
   align-items: center;
 }
-.logo {
-  background-color: none;
-  height: auto;
-  width: auto;
-}
 
 @media (max-width: 480px), (max-width: 768px) {
   .navbar {
     justify-content: center;
     box-shadow: none;
   }
+  .logo img {
+    display: none;
+  }
   .header {
     box-shadow: none;
   }
   .hamburger {
-    display: block; /* Assure que le hamburger est visible */
+    display: block;
     position: relative;
     left: 50%;
   }
   .contact-btn {
-    display: none; /* Cache les autres éléments de la navbar */
+    display: none;
   }
   .nav-links {
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond semi-transparente */
-    backdrop-filter: blur(10px); /* Effet de flou derrière le menu */
-    -webkit-backdrop-filter: blur(10px); /* Prise en charge de Safari */
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     width: 20%;
     height: auto;
     top: 20px;
@@ -104,10 +101,10 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    display: none; /* Cache les liens jusqu'à ce que le hamburger soit cliqué */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce pour améliorer l'effet de flottaison */
-    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Bordure subtile en haut */
-    z-index: 1000; /* S'assurer que le menu est au-dessus des autres éléments */
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
     padding: 20px;
   }
   .nav-links li {
@@ -119,18 +116,18 @@ html {
     padding-left: 65px;
   }
   .nav-links a {
-    font-size: 24px; /* Augmente la taille pour une meilleure lisibilité sur mobile */
+    font-size: 24px;
   }
 }
 
 @media (max-width: 768px) {
   .header {
     display: flex;
-    justify-content: flex-end; /* Aligner le contenu de l'en-tête à droite */
-    padding-right: 20px; /* Ajouter un peu de padding à droite pour un meilleur espacement */
+    justify-content: flex-end;
+    padding-right: 20px;
   }
   .hamburger {
-    display: block; /* Assure que le hamburger est visible */
+    display: block;
     position: relative;
     left: 50%;
   }
@@ -145,13 +142,16 @@ html {
     font-size: 16px;
   }
   .contact-btn {
+    display: none;
+  }
+  .logo img {
     display: none;
   }
 }
 
 @media (max-width: 1024px) {
   .hamburger {
-    display: block; /* Assure que le hamburger est visible */
+    display: block;
     position: relative;
     left: 50%;
   }
@@ -165,16 +165,41 @@ html {
   .nav-links a {
     font-size: 16px;
   }
-  .logo {
-    position: absolute;
-    left: 1px;
-    padding-left: 55px;
-  }
+
   .contact-btn {
+    display: none;
+  }
+  .logo img {
     display: none;
   }
 }
 
+.logoflex {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .logoflex {
+    display: block;
+    text-align: center;
+  }
+  .logoflex .logotel {
+    width: 40%;
+    margin: 0 auto;
+    transform: translateY(-60px);
+  }
+}
+
+.credits {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.credits a {
+  color: #666;
+}
 
 .title-container {
   display: flex;
@@ -262,45 +287,48 @@ html {
   background-color: #023c86;
 }
 
-@media (max-width: 768px) { /* Généralement pour les tablettes */
-  .title-container, .text-container {
-    margin: 0 50px; /* Réduire les marges */
-    width: 100%; /* Prend toute la largeur disponible */
+@media (max-width: 768px) {
+  .title-container,
+  .text-container {
+    margin: 0 50px;
+    width: 100%;
   }
 
   #titre {
-    font-size: 30px; /* Réduire la taille du titre */
+    font-size: 30px;
   }
 
   #subtitle {
-    font-size: large; /* Adapter la taille du sous-titre */
+    font-size: large;
   }
 
   .stars {
-    width: 80px; /* Adapter la taille de l'image */
+    width: 80px;
     height: auto;
   }
 
   .image-container {
-    display: none; /* Cacher l'image container */
+    display: none;
   }
 
-  .intro, .text-container {
+  .intro,
+  .text-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre le contenu verticalement et horizontalement */
-    width: 100%; /* Assure que le container prend toute la largeur */
+    align-items: center;
+    width: 100%;
   }
 }
 
-@media (max-width: 480px), (max-width:768px) { /* Généralement pour les téléphones */
+@media (max-width: 480px), (max-width: 768px) {
   .image-container {
-    display: none; /* Cacher l'image container */
+    display: none;
   }
 
-  .title-container, .text-container {
-    margin: 0 20px; /* Réduire encore plus les marges */
-    width: 100%; /* Assure que le container prend toute la largeur */
+  .title-container,
+  .text-container {
+    margin: 0 20px;
+    width: 100%;
     align-items: center;
     justify-content: center;
   }
@@ -308,34 +336,33 @@ html {
   #titre {
     font-size: 20px;
     align-items: center;
-    text-align: center; /* Réduire davantage la taille du titre */
+    text-align: center;
   }
 
   #subtitle {
-    font-size: medium; /* Adapter la taille du sous-titre */
+    font-size: medium;
   }
 
   .stars {
     position: absolute;
-    width: 50px; /* Réduire significativement la taille de l'image */
+    width: 50px;
     height: auto;
     right: 1px;
   }
 
   #contactus {
-    width: 160px; /* Ajuster la largeur du bouton */
-    padding: 10px 5px; /* Ajuster le padding */
+    width: 160px;
+    padding: 10px 5px;
     font-size: 15px;
   }
 
-  .intro, .text-container {
+  .intro,
+  .text-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre le contenu verticalement et horizontalement */
+    align-items: center;
   }
 }
-
-
 
 @keyframes slide {
   from {
@@ -393,23 +420,24 @@ html {
   color: #4566d6;
 }
 
-@media (max-width: 480px), (max-width:768px) {
+@media (max-width: 480px), (max-width: 768px) {
   #confiance {
-    font-size: 24px; /* Taille de police réduite pour le titre */
+    font-size: 24px;
     color: #4566d6;
   }
 
   .logos-slide img {
-    height: 100px; /* Taille des images réduite pour les téléphones */
-    margin: 0 20px; /* Réduction de l'espacement entre les logos */
+    height: 100px;
+    margin: 0 20px;
   }
 
-  .logos::before, .logos::after {
-    width: 100px; /* Réduction de la largeur des gradients pour ne pas couvrir trop de logos */
+  .logos::before,
+  .logos::after {
+    width: 100px;
   }
 
   .middle {
-    margin-top: 40px; /* Ajustement de la marge supérieure pour un meilleur alignement */
+    margin-top: 40px;
   }
 }
 
@@ -438,7 +466,6 @@ html {
   gap: 100px;
   justify-content: center;
 }
-
 
 .abstract-background {
   position: absolute;
@@ -530,15 +557,15 @@ html {
   margin-bottom: 20px;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .services-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-   width: 100%;
-   height: fit-content;
-   gap:0 ;
-   padding-top: 50px;
+    width: 100%;
+    height: fit-content;
+    gap: 0;
+    padding-top: 50px;
   }
 
   .services {
@@ -546,7 +573,7 @@ html {
     gap: 20px;
     align-items: center;
   }
- 
+
   .flex-column {
     flex-direction: column;
     gap: 20px;
@@ -555,7 +582,7 @@ html {
   .abstract-background {
     position: absolute;
     top: -230px;
-    left: -200px; /* Modifié */
+    left: -200px;
     width: 140%;
     height: 200%;
     z-index: -1;
@@ -579,7 +606,7 @@ html {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: auto;
-    height: auto; 
+    height: auto;
   }
 
   .service-box img {
@@ -596,22 +623,20 @@ html {
   }
 
   .text-content {
-    display: block; /* Show the text content */
+    display: block;
     text-align: center;
   }
-  
+
   .text-content h2 {
-    display: block; /* Ensure the header is visible */
+    display: block;
     font-size: 32px;
   }
 
   .text-content p,
   .text-content button {
-    display: none; /* Hide other textual elements */
+    display: none;
   }
-
 }
-
 
 .container {
   display: flex;
@@ -693,19 +718,19 @@ html {
   color: #666;
 }
 
-@media (max-width: 480px), (max-width:768px) {
+@media (max-width: 480px), (max-width: 768px) {
   .container {
     gap: 20px;
     height: auto;
     padding-top: 80px;
   }
   .step,
-.arrow {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+  .arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .content {
     display: flex;
     align-items: center;
@@ -713,12 +738,12 @@ html {
     gap: 10px;
     justify-content: center;
   }
-  .main-title  {
+  .main-title {
     font-size: 24px;
   }
-.sub-title{
-  font-size: 20px;
-}
+  .sub-title {
+    font-size: 20px;
+  }
   .box-247 {
     width: 90%;
     border-radius: 50px;
@@ -728,7 +753,7 @@ html {
   .content {
     flex-direction: column;
   }
-  .arrow img  {
+  .arrow img {
     transform: rotate(90deg);
     width: 40px;
     height: 40px;
@@ -783,10 +808,10 @@ h2 {
   background: linear-gradient(
     to right,
     #0077a2,
-    /* Bleu foncé */ #468c64,
-    /* Vert foncé */ #b1b319,
-    /* Jaune foncé */ #cc6d00,
-    /* Orange foncé */ #b32400 /* Rouge orangé foncé */
+    #468c64,
+    #b1b319,
+    #cc6d00,
+    #b32400
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -824,7 +849,7 @@ h2 {
 .background-image {
   position: absolute;
   right: 0;
-  width: 50%;
+  width: 60%;
   height: 80%;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 1;
@@ -845,12 +870,10 @@ h2 {
   transform: translatex(160px);
 }
 
-
-
-@media (max-width: 480px), (max-width:768px) {
+@media (max-width: 480px), (max-width: 768px) {
   .tools-section {
     flex-direction: column;
-    height: auto; /* Ajustement de la hauteur */
+    height: auto;
     padding-top: 50px;
   }
 
@@ -860,7 +883,7 @@ h2 {
   }
 
   .tools-group {
-    width: 100%; /* Chaque groupe prend la pleine largeur */
+    width: 100%;
   }
 
   .tool-row:first-child {
@@ -874,85 +897,87 @@ h2 {
   }
 
   .tool {
-    width: 33%; /* Chaque logo prend approximativement un tiers de l'espace dans la première ligne */
-    margin: 10px 0; /* Ajustement des marges pour l'espacement vertical */
+    width: 33%;
+    margin: 10px 0;
   }
 
-  .tool:nth-last-child(-n+2) { /* Sélectionne les deux derniers outils de chaque groupe */
-    width: 50%; /* Chaque logo dans la deuxième ligne prend la moitié de l'espace */
+  .tool:nth-last-child(-n + 2) {
+    width: 50%;
   }
 
   .background-image {
-    position: absolute; /* L'image de fond ne sera plus positionnée absolument */
-    width: 100%;
-    height: 100%; /* Ajustement de la hauteur de l'image de fond */
-    order: 2; /* S'assure que l'image de fond est en dessous des outils IA */
-    top: 460px;
-    
+    position: absolute;
+    right: 0;
+    width: 120%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    bottom: -70px;
+    transform: rotate(-20deg);
+    opacity: 0.2;
   }
 
   .ai-tools {
-    order: 1; /* Place les outils IA au-dessus de l'image de fond */
+    order: 1;
   }
 
-.logo-jira{
-  width: 100px;
-  height: 100px;
-}
-.logo-chatgpt {
-  width: 150px;
-  height: 100px;
-}
-.logo-canva {
-  width: 80px;
-  height: 80px;
-}
-.logo-mistralai {
-  width: 150px;
-  height: 100px;
-  transform: translateY(-15px);
-}
-.logo-copilot {
- height: 70px;
-}
-.logo-gemini {
-  margin-bottom: 3px;
-  width: 100px;
-}
-.logo-figma {
-  width: 90px;
-  height: 90px;
-}
-.logo-wordpress {
-  padding-left: 20px;
-  width: 50px;
-}
-.logo-elementor {
-  width: 100px;
-}
+  .logo-jira {
+    width: 100px;
+    height: 100px;
+  }
+  .logo-chatgpt {
+    width: 150px;
+    height: 100px;
+  }
+  .logo-canva {
+    width: 80px;
+    height: 80px;
+  }
+  .logo-mistralai {
+    width: 150px;
+    height: 100px;
+    transform: translateY(-15px);
+  }
+  .logo-copilot {
+    height: 70px;
+  }
+  .logo-gemini {
+    margin-bottom: 3px;
+    width: 70%;
+    transform: translateX(33px);
+  }
+  .logo-figma {
+    width: 90px;
+    height: 90px;
+  }
+  .logo-wordpress {
+    padding-left: 20px;
+    width: 50px;
+  }
+  .logo-elementor {
+    width: 100px;
+  }
 
-.tool.tool-chatgpt {
-  transform: translatex(-40px);
-}
+  .tool.tool-chatgpt {
+    transform: translatex(-4px);
+  }
 
-.tool.tool-mistralai {
-  transform: translatex(45px);
-}
+  .tool.tool-mistralai {
+    transform: translatex(-12px);
+  }
 
-.tool.tool-gemini {
-  transform: translatex(20px);
-  transform: translateY(-20px);
-}
+  .tool.tool-gemini {
+    transform: translatex(-800px);
+    transform: translateY(-20px);
+  }
 
-.tool.tool-copilot {
-  transform: translatex(70px);
+  .tool.tool-copilot {
+    transform: translatex(32px);
+  }
+  h2 {
+    font-size: 20px;
+  }
 }
-h2 {
-  font-size: 20px;
-}
-  
-}
-
 
 .contact-form {
   background: #ffffff;
@@ -965,15 +990,15 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 #message {
-  margin-bottom: 20px; /* Ajoute une marge en bas de la zone de texte 'Message' */
+  margin-bottom: 20px;
 }
 legend {
-  font-size: 28px; /* Augmente la taille de la police */
+  font-size: 28px;
   color: #4566d6;
   padding-bottom: 15px;
-  font-weight: bold; /* Rend le texte en gras */
-  text-align: center; /* Centre le texte dans le formulaire */
-  width: 100%; /* Assure que la légende prend toute la largeur pour centrer le texte */
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
 }
 
 fieldset {
@@ -982,27 +1007,27 @@ fieldset {
 
 .row {
   display: flex;
-  justify-content: space-between; /* Assure un espacement entre les colonnes */
+  justify-content: space-between;
 }
 
 .column {
   display: flex;
   flex-direction: column;
-  flex: 1; /* Assure que chaque colonne prend une part égale de l'espace disponible */
-  margin-right: 10px; /* Espacement entre les colonnes */
+  flex: 1;
+  margin-right: 10px;
 }
 
 .column:last-child {
-  margin-right: 0; /* Aucun espacement sur le côté droit du dernier élément */
+  margin-right: 0;
 }
 
 label {
   display: block;
-  margin-bottom: 5px; /* Ajoute une marge en bas du label */
-  margin-top: 10px; /* Ajoute une marge au-dessus du label */
-  padding: 5px 0; /* Ajoute un padding vertical mais pas horizontal */
-  font-size: 16px; /* Ajuste la taille du texte du label pour une meilleure visibilité */
-  color: #333; /* Définit la couleur du texte des labels */
+  margin-bottom: 5px;
+  margin-top: 10px;
+  padding: 5px 0;
+  font-size: 16px;
+  color: #333;
 }
 
 input[type="text"],
@@ -1040,44 +1065,45 @@ textarea:focus {
   background-color: #023c86;
 }
 
-@media (max-width: 480px), (max-width:768px) {
+@media (max-width: 480px), (max-width: 768px) {
   .contact-form {
-    width: 80%; /* Réduction proportionnelle de la largeur du formulaire */
-    padding: 25px; /* Ajustement du padding pour conserver l'esthétique sur petits écrans */
-    margin: 30px auto; /* Centrage horizontal et espacement vertical ajusté */
-    display: flex; /* Activation de Flexbox */
-    flex-direction: column; /* Direction de la flexbox */
-    justify-content: center; /* Centre les éléments verticalement dans le conteneur */
-    align-items: center; /* Alignement horizontal au centre */
+    width: 80%;
+    padding: 25px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  #message, input[type="text"], input[type="email"], textarea {
-    padding: 10px; /* Réduction du padding pour les éléments de formulaire pour économiser de l'espace */
-    width: 100%; /* Ajuste la largeur pour inclure le padding sans déborder */
+  #message,
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    width: 100%;
   }
 
   .row {
-    flex-direction: column; /* Les éléments dans la classe row s'alignent verticalement */
+    flex-direction: column;
   }
 
   .column {
-    margin-right: 0; /* Suppression de la marge droite pour les colonnes */
-    margin-bottom: 10px; /* Ajout d'un espace en bas de chaque colonne */
-    width: 100%; /* Assure que les colonnes prennent toute la largeur disponible */
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
   }
 
   .send-button {
-    padding: 12px 0; /* Augmentation du padding vertical pour un meilleur toucher sur écrans tactiles */
-    width: 100%; /* Ajuste la largeur du bouton pour qu'il corresponde à celle du formulaire */
+    padding: 12px 0;
+    width: 100%;
   }
 }
-
-
 
 footer {
   background-color: #f2f2f2;
   color: #333;
-  padding: 20px 20px 0 20px; /* Haut, Droite, Bas, Gauche */
+  padding: 20px 20px 0 20px;
   font-family: Arial, sans-serif;
   border-top: solid 1px #ccc;
   margin-top: 50px;
@@ -1111,7 +1137,7 @@ footer {
 
 .footer-logo {
   flex: 0 0 auto;
-  margin-right: 20px; /* Ensure space between logo and links */
+  margin-right: 20px;
 }
 
 .footer-links-container {
@@ -1147,38 +1173,38 @@ footer {
   color: #666;
   width: 100%;
   font-weight: bold;
-  margin-top: 20px; /* Adjust space above */
+  margin-top: 20px;
 }
 
-@media (max-width: 480px), (max-width:768px) {
+@media (max-width: 480px), (max-width: 768px) {
   .footer-container {
-    padding: 10px; /* Ajustement du padding pour les petits écrans */
+    padding: 10px;
   }
 
   .footer-top {
-    flex-direction: column; /* Empile les éléments verticalement */
-    align-items: center; /* Centre les éléments dans le footer */
-    text-align: center; /* Centre le texte pour une meilleure lecture */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .footer-logo {
-    margin-right: 0; /* Suppression de la marge à droite */
+    margin-right: 0;
   }
   .footer-image {
     width: 100px;
     height: 100px;
   }
   .footer-links-container {
-    flex-direction: column; /* Affiche les groupes de liens en colonne */
-    align-items: center; /* Centre les liens dans leur conteneur */
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-links {
-    text-align: center; /* Assure que le texte des liens est centré */
+    text-align: center;
   }
 
   .footer-rights {
-    margin-top: 10px; /* Réduit l'espace au-dessus du texte des droits */
-    font-size: 12px; /* Ajuste la taille de police pour les petits écrans */
+    margin-top: 10px; 
+    font-size: 12px; 
   }
 }

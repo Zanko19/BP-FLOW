@@ -16,30 +16,40 @@
       <nav class="navbar">
         <button class="hamburger">&#9776;</button>
         <div class="logo">
-          <img src="./src/img/Logo.png" alt="Logo BP FLOW" />
+          <img src="./src/img/Logo.png" alt="Logo BP FLOW" class="logo" />
         </div>
+
         <ul class="nav-links">
           <li><a href="#accueil">Accueil</a></li>
           <li><a href="#services">Services</a></li>
-
           <li><a href="#apropos">À propos</a></li>
         </ul>
-        <button class="contact-btn" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });">Contactez-Nous</button>
-
+        <button
+          class="contact-btn"
+          onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });"
+        >
+          Contactez-Nous
+        </button>
       </nav>
     </div>
-    
+    <div class="logoflex">
+      <img src="./src/img/Logo.png" alt="Logo BP FLOW" class="logotel" />
+    </div>
+
     <div class="intro">
       <div class="text-container">
         <div class="title-container">
-          <!-- Nouveau div pour flexbox -->
-          <h1 id="titre">Digitalisez mieux grâce à l'IA</h1>
+          <h1 id="titre">Digitalisez mieux grâce à l'IA.</h1>
           <img src="./src/img/AI.png" alt="Image AI" class="stars" />
         </div>
         <p id="subtitle">Innover, Créer et Simplifier.<br /></p>
         <div class="cnt">
-          <button id="contactus" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });">Avançons ensemble</button>
-
+          <button
+            id="contactus"
+            onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });"
+          >
+            Avançons ensemble
+          </button>
         </div>
       </div>
       <div class="image-container">
@@ -49,7 +59,7 @@
     </div>
 
     <div class="middle">
-      <h1 id="confiance">Ils nous font confiance</h1>
+      <h1 id="confiance">Ils nous font confiance.</h1>
     </div>
 
     <div class="logos">
@@ -84,8 +94,12 @@
           page, faites appel à des experts.
         </p>
         <p>Rejoignez-nous pour transformer vos idées en succès.</p>
-        <button class="contact-button" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });">Nous contacter</button>
-
+        <button
+          class="contact-button"
+          onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });"
+        >
+          Nous contacter
+        </button>
       </div>
 
       <div class="services">
@@ -236,18 +250,17 @@
           </div>
         </div>
       </div>
-      <img src="./src/img/logo/BGai.svg" class="background-image">
+      <img src="./src/img/logo/BGai.svg" class="background-image" />
     </div>
     <form
-  action="https://api.web3forms.com/submit"
-  method="POST"
-  class="contact-form"
-  id="contact-form"
->
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      class="contact-form"
+      id="contact-form"
+    >
       <fieldset>
         <legend>Formulaire de contact</legend>
         <div class="form-group row">
-          <!-- Ajout de la classe 'row' pour flexbox -->
           <div class="column">
             <label for="nom">Nom</label>
             <input
@@ -326,9 +339,19 @@
             </div>
           </div>
         </div>
+
         <div class="footer-rights">
           <p>2024 BP FLOW © All rights reserved</p>
         </div>
+        <p class="credits">
+          Icons by
+          <a
+            href="https://icons8.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Icons8</a
+          >
+        </p>
       </div>
     </footer>
     <script
