@@ -3,6 +3,8 @@ body,
 html {
   height: 100%;
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -22,9 +24,58 @@ html {
   border: none;
   color: #023c86; /* Couleur peut être ajustée */
 }
+.contact-btn {
+  background-color: #0015ff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 2px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  width: 150px;
+}
+.contact-btn:hover {
+  background-color: #023c86;
+}
+.navbar .logo span:first-child {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e90ff;
+}
+.navbar .logo span:last-child {
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+.nav-links li {
+  padding: 0 15px;
+}
+.nav-links a {
+  color: #023c86;
+  text-decoration: none;
+  font-size: 18px;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+.navbar .logo img {
+  height: 200%;
+  width: 140px;
+  overflow: hidden;
+  align-items: center;
+}
+.logo {
+  background-color: none;
+  height: auto;
+  width: auto;
+}
 
-@media (max-width: 480px), (max-width:768px) {
-
+@media (max-width: 480px), (max-width: 768px) {
   .navbar {
     justify-content: center;
     box-shadow: none;
@@ -34,11 +85,10 @@ html {
   }
   .hamburger {
     display: block; /* Assure que le hamburger est visible */
-    position: relative; /* Position absolue pour permettre un placement précis */
-    left: 50%; /* Démarre à la moitié de la navbar */
-    
+    position: relative;
+    left: 50%;
   }
-.contact-btn {
+  .contact-btn {
     display: none; /* Cache les autres éléments de la navbar */
   }
   .nav-links {
@@ -60,26 +110,20 @@ html {
     z-index: 1000; /* S'assurer que le menu est au-dessus des autres éléments */
     padding: 20px;
   }
-  
-
   .nav-links li {
     padding: 30px;
     margin: 10px;
-    
   }
-.navbar .logo img  {
-
-  left: 1px;
-  padding-left: 65px;
-  
-
-}
+  .navbar .logo img {
+    left: 1px;
+    padding-left: 65px;
+  }
   .nav-links a {
-    font-size: 24px;
-     /* Augmente la taille pour une meilleure lisibilité sur mobile */
+    font-size: 24px; /* Augmente la taille pour une meilleure lisibilité sur mobile */
   }
 }
-@media(max-width: 768px) {
+
+@media (max-width: 768px) {
   .header {
     display: flex;
     justify-content: flex-end; /* Aligner le contenu de l'en-tête à droite */
@@ -87,28 +131,11 @@ html {
   }
   .hamburger {
     display: block; /* Assure que le hamburger est visible */
-    position: relative; /* Position absolue pour permettre un placement précis */
-    left: 50%; /* Démarre à la moitié de la navbar */
-    
+    position: relative;
+    left: 50%;
   }
-  
   .nav-links {
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond semi-transparente */
-    backdrop-filter: blur(10px); /* Effet de flou derrière le menu */
-    -webkit-backdrop-filter: blur(10px); /* Prise en charge de Safari */
     width: 45%;
-    height: auto;
-    top: 20px;
-    left: -100%;
-    transition: left 0.3s;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: none; /* Cache les liens jusqu'à ce que le hamburger soit cliqué */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce pour améliorer l'effet de flottaison */
-    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Bordure subtile en haut */
-    z-index: 1000; /* S'assurer que le menu est au-dessus des autres éléments */
     padding: 10px;
   }
   .nav-links li {
@@ -117,41 +144,19 @@ html {
   .nav-links a {
     font-size: 16px;
   }
-  .logo {
-    position: absolute;
-    left: 1px;
-    padding-left: 55px;
-  }
-  
   .contact-btn {
     display: none;
   }
 }
-@media(max-width: 1024px) {
+
+@media (max-width: 1024px) {
   .hamburger {
     display: block; /* Assure que le hamburger est visible */
-    position: relative; /* Position absolue pour permettre un placement précis */
-    left: 50%; /* Démarre à la moitié de la navbar */
-    
+    position: relative;
+    left: 50%;
   }
-  
   .nav-links {
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond semi-transparente */
-    backdrop-filter: blur(10px); /* Effet de flou derrière le menu */
-    -webkit-backdrop-filter: blur(10px); /* Prise en charge de Safari */
     width: 45%;
-    height: auto;
-    top: 20px;
-    left: -100%;
-    transition: left 0.3s;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: none; /* Cache les liens jusqu'à ce que le hamburger soit cliqué */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce pour améliorer l'effet de flottaison */
-    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Bordure subtile en haut */
-    z-index: 1000; /* S'assurer que le menu est au-dessus des autres éléments */
     padding: 10px;
   }
   .nav-links li {
@@ -165,70 +170,11 @@ html {
     left: 1px;
     padding-left: 55px;
   }
-  
   .contact-btn {
     display: none;
   }
 }
-.contact-btn {
-  background-color: #0015ff;
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 15px 2px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-  width: 150px;
-}
-.contact-btn:hover {
-  background-color: #023c86;
-}
 
-.navbar .logo span:first-child {
-  font-size: 24px;
-  font-weight: bold;
-  color: #1e90ff;
-}
-
-.navbar .logo span:last-child {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  
-}
-
-.nav-links li {
-  padding: 0 15px;
-  
-}
-
-.nav-links a {
-  color: #023c86;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-
-  
-}
-
-.navbar .logo img {
-  height: 200%;
-  width: 140px;
-  overflow: hidden;
-  align-items: center;
-}
-.logo {
-  background-color: none;
-}
 
 .title-container {
   display: flex;
@@ -252,7 +198,7 @@ html {
 .intro {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   margin-right: 150px;
   margin-left: 00px;
@@ -592,6 +538,7 @@ html {
    width: 100%;
    height: fit-content;
    gap:0 ;
+   padding-top: 50px;
   }
 
   .services {
@@ -608,9 +555,9 @@ html {
   .abstract-background {
     position: absolute;
     top: -230px;
-    left: -300px;
-    width: 170%;
-    height: 190%;
+    left: -200px; /* Modifié */
+    width: 140%;
+    height: 200%;
     z-index: -1;
     background-image: url("./src/img/logo/blob.svg");
     background-size: contain;
@@ -878,9 +825,7 @@ h2 {
   position: absolute;
   right: 0;
   width: 50%;
-  height: 100%;
-  background-image: url("./src/img/logo/BGai.svg");
-  background-size: cover;
+  height: 80%;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 1;
 }

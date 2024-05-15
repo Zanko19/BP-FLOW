@@ -24,7 +24,8 @@
 
           <li><a href="#apropos">À propos</a></li>
         </ul>
-        <button class="contact-btn">Contactez-Nous</button>
+        <button class="contact-btn" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });">Contactez-Nous</button>
+
       </nav>
     </div>
     
@@ -37,7 +38,8 @@
         </div>
         <p id="subtitle">Innover, Créer et Simplifier.<br /></p>
         <div class="cnt">
-          <button id="contactus">Avançons ensemble</button>
+          <button id="contactus" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });">Avançons ensemble</button>
+
         </div>
       </div>
       <div class="image-container">
@@ -82,7 +84,8 @@
           page, faites appel à des experts.
         </p>
         <p>Rejoignez-nous pour transformer vos idées en succès.</p>
-        <button class="contact-button">Nous contacter</button>
+        <button class="contact-button" onclick="document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });">Nous contacter</button>
+
       </div>
 
       <div class="services">
@@ -233,13 +236,14 @@
           </div>
         </div>
       </div>
-      <div class="background-image"></div>
+      <img src="./src/img/logo/BGai.svg" class="background-image">
     </div>
     <form
-      action="https://api.web3forms.com/submit"
-      method="POST"
-      class="contact-form"
-    >
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  class="contact-form"
+  id="contact-form"
+>
       <fieldset>
         <legend>Formulaire de contact</legend>
         <div class="form-group row">
