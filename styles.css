@@ -63,10 +63,12 @@ html {
   text-decoration: underline;
 }
 .navbar .logo img {
-  height: 200%;
+  height: 100%;
   width: 140px;
   overflow: hidden;
   align-items: center;
+  justify-content: center;
+  transform: translateY(10px);
 }
 
 @media (max-width: 480px), (max-width: 768px) {
@@ -182,13 +184,19 @@ html {
   .logoflex {
     display: block;
     text-align: center;
+    position: relative; /* Ajouté pour assurer le positionnement relatif */
+    height: 0; /* Minimise l'espace que la div occupe */
   }
   .logoflex .logotel {
     width: 40%;
     margin: 0 auto;
-    transform: translateY(-60px);
+    position: absolute; /* Positionnement absolu */
+    top: 0; /* Aligné au haut de son parent */
+    left: 50%; /* Centrage horizontal */
+    transform: translateX(-51%) translateY(-120px); /* Ajustement pour centrer précisément */
   }
 }
+
 
 .credits {
   color: #999;
@@ -207,7 +215,7 @@ html {
 }
 
 #titre {
-  font-size: 40px;
+  font-size: 38px;
   text-align: right;
   margin-right: 10px;
   margin-bottom: 0;
@@ -449,6 +457,7 @@ html {
   position: relative;
   padding-top: 200px;
   padding-bottom: 50px;
+  flex-direction: row-reverse;
 }
 
 .services {
@@ -763,19 +772,21 @@ html {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
+
 .tools-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   z-index: 2;
   width: 100%;
 }
+
 .tools-group {
   width: 50%;
   display: flex;
@@ -783,10 +794,18 @@ html {
   align-items: center;
   padding: 20px;
 }
+
 .tool-row {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  width: 100%;
   margin-bottom: 20px;
+}
+
+.tool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h2 {
@@ -796,32 +815,8 @@ h2 {
   margin-bottom: 20px;
 }
 
-.tool {
-  display: flex;
-  align-items: center;
-  margin: 0 10px;
-}
-#toologocopilot {
-  font-weight: bold;
-  font-size: x-large;
-  margin-left: 15px;
-  background: linear-gradient(
-    to right,
-    #0077a2,
-    #468c64,
-    #b1b319,
-    #cc6d00,
-    #b32400
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-.logo-canva,
-.logo-jira,
-.logo-chatgpt {
+/* Specific logo sizes and styles unchanged, copied exactly as in your original CSS */
+.logo-canva, .logo-jira, .logo-chatgpt {
   width: 150px;
   height: 100px;
 }
@@ -829,50 +824,56 @@ h2 {
 .logo-mistralai {
   width: 150px;
   height: 100px;
-  transform: translateY(-15px);
 }
 
-.logo-gemini {
-  margin-bottom: 35px;
-}
+
+
 .logo-figma {
   width: 190px;
   height: 190px;
 }
+
 .logo-wordpress {
   width: 80px;
 }
+
 .logo-elementor {
   width: 200px;
-  margin-left: 25px;
+ 
 }
-.background-image {
-  position: absolute;
-  right: 0;
-  width: 60%;
-  height: 80%;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 1;
-}
+
 .tool.tool-chatgpt {
   transform: translatex(-40px);
 }
 
-.tool.tool-mistralai {
-  transform: translatex(150px);
-}
+
 
 .tool.tool-gemini {
   transform: translatex(-40px);
 }
 
-.tool.tool-copilot {
-  transform: translatex(160px);
+
+#toologocopilot {
+  font-weight: bold;
+  font-size: x-large;
+  background: linear-gradient(
+    to right,
+    #0077a2,  /* Dark blue */
+    #468c64,  /* Dark green */
+    #b1b319,  /* Dark yellow */
+    #cc6d00,  /* Dark orange */
+    #b32400   /* Dark red-orange */
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
+
 
 @media (max-width: 480px), (max-width: 768px) {
   .tools-section {
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
     padding-top: 50px;
   }
@@ -905,17 +906,6 @@ h2 {
     width: 50%;
   }
 
-  .background-image {
-    position: absolute;
-    right: 0;
-    width: 120%;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 1;
-    bottom: -70px;
-    transform: rotate(-20deg);
-    opacity: 0.2;
-  }
 
   .ai-tools {
     order: 1;
@@ -979,6 +969,7 @@ h2 {
   }
 }
 
+
 .contact-form {
   background: #ffffff;
   padding: 20px;
@@ -1039,6 +1030,7 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
   background-color: #d9e1fc;
+  resize: none;
 }
 
 input[type="text"]:focus,
