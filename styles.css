@@ -71,7 +71,7 @@ html {
   transform: translateY(10px);
 }
 
-@media (max-width: 480px), (max-width: 768px) {
+@media (max-width: 480px), (max-width: 1024px) {
   .navbar {
     justify-content: center;
     box-shadow: none;
@@ -180,7 +180,7 @@ html {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .logoflex {
     display: block;
     text-align: center;
@@ -295,7 +295,7 @@ html {
   background-color: #023c86;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .title-container,
   .text-container {
     margin: 0 50px;
@@ -328,7 +328,7 @@ html {
   }
 }
 
-@media (max-width: 480px), (max-width: 768px) {
+@media (max-width: 480px), (max-width: 1024px) {
   .image-container {
     display: none;
   }
@@ -428,7 +428,7 @@ html {
   color: #4566d6;
 }
 
-@media (max-width: 480px), (max-width: 768px) {
+@media (max-width: 480px), (max-width: 1024px) {
   #confiance {
     font-size: 24px;
     color: #4566d6;
@@ -566,7 +566,7 @@ html {
   margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .services-section {
     display: flex;
     flex-direction: column;
@@ -727,7 +727,7 @@ html {
   color: #666;
 }
 
-@media (max-width: 480px), (max-width: 768px) {
+@media (max-width: 480px), (max-width: 1024px) {
   .container {
     gap: 20px;
     height: auto;
@@ -774,7 +774,17 @@ html {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.tools-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -795,17 +805,29 @@ html {
   padding: 20px;
 }
 
-.tool-row {
+.tool-row-web {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin-bottom: 20px;
+  justify-content: center; /* Ou 'space-between' selon la disposition désirée */
+  width: 50%;
 }
-
+.tool-row-ai-1 {
+  display: flex;
+  justify-content: space-between; /* Adjusted or 'space-between' as desired */
+  width: 50%;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.tool-row-ai-2 {
+  display: flex;
+  justify-content: space-between; /* Adjusted or 'space-between' as desired */
+  width: 50%;
+  gap: 5px;
+}
 .tool {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 5px; /* Réduction de la marge pour rapprocher les logos */
 }
 
 h2 {
@@ -815,26 +837,40 @@ h2 {
   margin-bottom: 20px;
 }
 
+.spaced-logo {
+  margin: 0 20px; /* Augmentez cette valeur pour plus d'espace */
+}
+
+/* Les styles de logo spécifiques restent inchangés */
+
+
 /* Specific logo sizes and styles unchanged, copied exactly as in your original CSS */
-.logo-canva, .logo-jira, .logo-chatgpt {
+.logo-chatgpt {
   width: 150px;
   height: 100px;
 }
-
+.logo-canva, .logo-jira {
+  width: 100px;
+  height: 100px;
+}
 .logo-mistralai {
   width: 150px;
   height: 100px;
 }
 
-
-
+.logo-gemini {
+  width: 150px;
+}
+.logo-copilot {
+  width: 70px;
+}
 .logo-figma {
-  width: 190px;
-  height: 190px;
+  width: 150px;
+  height: 150px;
 }
 
 .logo-wordpress {
-  width: 80px;
+  width: 60px;
 }
 
 .logo-elementor {
@@ -842,15 +878,6 @@ h2 {
  
 }
 
-.tool.tool-chatgpt {
-  transform: translatex(-40px);
-}
-
-
-
-.tool.tool-gemini {
-  transform: translatex(-40px);
-}
 
 
 #toologocopilot {
@@ -871,11 +898,11 @@ h2 {
 }
 
 
-@media (max-width: 480px), (max-width: 768px) {
+@media (max-width: 480px), (max-width: 1024px) {
   .tools-section {
-    flex-direction: row;
+    flex-direction: column; /* Les outils seront disposés verticalement */
     height: auto;
-    padding-top: 50px;
+    padding-top: 20px;
   }
 
   .tools-content {
@@ -884,90 +911,101 @@ h2 {
   }
 
   .tools-group {
-    width: 100%;
+    width: 100%; /* Chaque groupe prend la pleine largeur sur mobile */
+    padding: 0; /* Suppression de la marge intérieure */
   }
 
-  .tool-row:first-child {
-    justify-content: space-around;
-    flex-wrap: wrap;
+  .tool-row-web {
+    display: flex;
+    flex-direction: column; /* Les outils sont disposés verticalement */
+    align-items: center; /* Centre les outils dans leur conteneur */
   }
 
-  .tool-row:last-child {
-    justify-content: space-around;
-    flex-wrap: wrap;
+  .tool-row-ai-1, .tool-row-ai-2 {
+    display: flex;
+    flex-direction: column; /* Les outils dans chaque ligne sont disposés verticalement */
+    align-items: center; /* Centre les outils dans leur conteneur */
+    margin: 0; /* Aucun margin entre les logos */
+    padding: 0; /* Aucun padding entre les logos */
+  }
+
+  .tool-row-ai-1 .tool, .tool-row-ai-2 .tool {
+    margin: 0; /* Aucun margin entre les logos */
+    padding: 0; /* Aucun padding entre les logos */
   }
 
   .tool {
-    width: 33%;
-    margin: 10px 0;
+    width: 100%; /* Les outils prennent toute la largeur disponible */
+    margin: 5px; /* Espacement vertical entre les outils */
+    justify-content: center; /* Centre les outils horizontalement */
   }
 
-  .tool:nth-last-child(-n + 2) {
-    width: 50%;
-  }
+  
 
-
-  .ai-tools {
-    order: 1;
-  }
-
-  .logo-jira {
-    width: 100px;
-    height: 100px;
-  }
-  .logo-chatgpt {
-    width: 150px;
-    height: 100px;
-  }
-  .logo-canva {
-    width: 80px;
-    height: 80px;
-  }
-  .logo-mistralai {
-    width: 150px;
-    height: 100px;
-    transform: translateY(-15px);
-  }
-  .logo-copilot {
-    height: 70px;
-  }
-  .logo-gemini {
-    margin-bottom: 3px;
-    width: 70%;
-    transform: translateX(33px);
-  }
-  .logo-figma {
-    width: 90px;
-    height: 90px;
-  }
-  .logo-wordpress {
-    padding-left: 20px;
-    width: 50px;
-  }
-  .logo-elementor {
-    width: 100px;
-  }
-
-  .tool.tool-chatgpt {
-    transform: translatex(-4px);
-  }
-
-  .tool.tool-mistralai {
-    transform: translatex(-12px);
-  }
-
-  .tool.tool-gemini {
-    transform: translatex(-800px);
-    transform: translateY(-20px);
-  }
-
-  .tool.tool-copilot {
-    transform: translatex(32px);
-  }
   h2 {
-    font-size: 20px;
+    font-size: 26px; /* Réduction de la taille des titres pour les écrans mobiles */
   }
+
+  /* Ajout d'espacement spécifique autour des titres pour une meilleure visibilité */
+  #webtitle, #iatitle {
+    margin-bottom: 15px;
+  }
+
+  /* Classe pour le logo Figma */
+.logo-figma {
+
+  height: 100px;
 }
+
+/* Classe pour le logo WordPress */
+.logo-wordpress {
+  width: 70px;
+}
+
+/* Classe pour le logo Elementor */
+.logo-elementor {
+  width: 170px;
+  height: 100px;
+}
+
+/* Classe pour le logo Canva */
+.logo-canva {
+  width: 90px;
+}
+
+/* Classe pour le logo Jira */
+.logo-jira {
+  width: 120px;
+  height: 80px;
+}
+
+/* Classe pour le logo ChatGPT */
+.logo-chatgpt {
+  width: 140px;
+  
+}
+
+/* Classe pour le logo Mistral AI */
+.logo-mistralai {
+  width: 150px;
+  transform: translateX(-5px);
+}
+
+/* Classe pour le logo Gemini */
+.logo-gemini {
+  width: 130px;
+margin-bottom: 18px;
+transform: translateX(-10px);
+}
+
+/* Classe pour le logo Copilot */
+.logo-copilot {
+  width: 85px;
+
+}
+
+}
+
 
 
 .contact-form {
