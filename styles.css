@@ -432,7 +432,7 @@ html {
   #confiance {
     font-size: 24px;
     color: #4566d6;
-  }
+  transform: translateY(10px);  }
 
   .logos-slide img {
     height: 100px;
@@ -445,7 +445,8 @@ html {
   }
 
   .middle {
-    margin-top: 40px;
+    margin-top: 50px;
+    height: 5%;;
   }
 }
 
